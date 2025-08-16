@@ -1,7 +1,7 @@
 package br.edu.fatec.tecprog.estruturado;
 import java.util.Scanner;
 
-public class Main {
+public class atv1 {
 
 	static Scanner scan = new Scanner(System.in);
 
