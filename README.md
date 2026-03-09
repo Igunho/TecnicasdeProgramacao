@@ -1,6 +1,8 @@
 # TecnicasdeProgramacao
 Repoitório para armazenamento e envio das minhas atividades da disciplina de Tecnicas de Programação do Curso de Desenvolvimento de Software Multiplataforma na FATEC Praia Grande
 
+# TP I
+
 ## ATIVIDADE PRÁTICA 1 - PROGRAMAÇÃO ESTRUTURADA
 
   1. Crie um programa que solicite ao usuário digitar um número. Se o número for positivo, exiba "Número positivo", caso contrário, exiba "Número negativo".
@@ -102,3 +104,112 @@ Devolver um livro informando os dias de atraso, atualizando o cálculo de multa
   No método login(), implemente a lógica para verificar se o usuário e senha inseridos correspondem aos valores corretos.
   Se o login for bem-sucedido, armazene um valor booleano que indica se o usuário está autenticado ou não.
   Tarefa: Crie uma classe de teste que peça ao usuário para inserir o nome de usuário e senha. Se o login estiver correto, o sistema deverá exibir uma mensagem de boas-vindas. Caso contrário, deverá pedir para tentar novamente até acertar. O sistema também deve permitir fazer o logout.
+
+## ATIVIDADE PRÁTICA 8 - POLIMORFISMO
+
+### 1. Sobrescrita de métodos em uma hierarquia de veículos
+#### Enunciado:​
+Implemente uma classe base chamada Veiculo que possua um método mover(). Crie
+duas subclasses: Carro e Bicicleta, que sobrescrevam o método mover() com
+comportamentos específicos.
+ - A classe Carro deve imprimir "O carro está dirigindo" e a classe Bicicleta deve
+imprimir "A bicicleta está pedalando".
+#### Pergunta:​
+Explique como a sobrescrita de métodos permite comportamentos diferentes para objetos
+da mesma hierarquia.
+### 2. Sobrecarga de métodos
+#### Enunciado:​
+Crie uma classe Calculadora que contenha três versões do método somar(). A primeira
+versão deve receber dois parâmetros inteiros, a segunda deve receber três parâmetros
+inteiros, e a terceira deve receber dois parâmetros do tipo double.
+ - Implemente as três versões do método somar() e teste chamando cada uma com
+diferentes combinações de argumentos.
+ -  Discuta como a sobrecarga de métodos permite a criação de várias versões do
+mesmo método com assinaturas diferentes.
+#### Pergunta:​
+Descreva o mecanismo de sobrecarga de métodos e como ele difere da sobrescrita em
+termos de polimorfismo.
+#### 3. Sobrecarga de construtores
+#### Enunciado:​
+Crie uma classe chamada Produto com três construtores sobrecarregados:
+ -  O primeiro deve receber um nome do produto (String).
+ -  O segundo deve receber um nome e um preço (double).
+ -  O terceiro deve receber um nome, um preço e uma quantidade em estoque (int).
+ -  Instancie objetos da classe Produto utilizando cada um dos construtores e imprima
+as informações dos produtos.
+#### Pergunta:​
+Discuta como a sobrecarga de construtores facilita a criação de objetos com diferentes
+conjuntos de informações, permitindo flexibilidade na instânciação de objetos.
+### 4. Sobrescrita de métodos em uma classe de pagamento
+#### Enunciado:​
+Crie uma classe base chamada Pagamento com um método processarPagamento(), que
+apenas imprime "Processando pagamento genérico". Em seguida, crie duas subclasses:
+PagamentoCartao e PagamentoBoleto.
+ -  A classe PagamentoCartao deve sobrescrever o método processarPagamento()
+para imprimir "Processando pagamento via cartão de crédito".
+ -  A classe PagamentoBoleto deve sobrescrever o método processarPagamento()
+para imprimir "Processando pagamento via boleto bancário".
+ -  Instancie objetos de ambas as classes e demonstre o polimorfismo chamando o
+método processarPagamento() em cada um deles.
+#### Pergunta:​
+Como o polimorfismo por sobrescrita facilita a implementação de diferentes formas de
+pagamento dentro de um sistema sem alterar o código da classe base?
+### 5. Sobrecarga de métodos em uma classe de conversão
+#### Enunciado:​
+Implemente uma classe chamada Conversor que contenha três versões sobrecarregadas
+do método converter():
+ -  A primeira versão deve converter uma temperatura de Celsius para Fahrenheit.
+ -  A segunda versão deve converter um valor de quilômetros para milhas.
+ -  A terceira versão deve converter uma string para letras maiúsculas.
+ -  Teste todas as versões do método converter() chamando cada uma com os
+parâmetros adequados.
+#### Pergunta:​
+Explique como a sobrecarga de métodos permite implementar várias versões do método
+converter(), mesmo com diferentes tipos de dados e funcionalidades.
+
+## ATIVIDADE PRÁTICA 9 - SWING JAVA
+
+### Exercício 1: Sistema de Formulário de Cadastro 
+Você foi contratado para criar um sistema de formulário de cadastro utilizando os componentes Swing. 
+Crie uma classe chamada Cliente que deve receber o valor dos campos da classe CadastroForm que deve possuir: 
+#### Atributos: 
+JLabel para os títulos "Nome", "Idade" e "Sexo" 
+JTextField para inserir o nome 
+JSpinner para inserir a idade 
+Duas opções de JRadioButton para selecionar o sexo (masculino ou feminino) 
+JButton para enviar os dados 
+#### Funcionalidades: 
+Ao clicar no botão de enviar, os dados inseridos no formulário devem ser capturados e exibidos em um JLabel adicional na tela com o resumo das informações. 
+O sistema deve garantir que todos os campos sejam preenchidos antes de permitir a submissão. Estruture seu código em classes e métodos apropriados utilizando conceitos de orientação a objetos.
+
+### Exercício 2: Ferramenta de Configuração de Preferências 
+Implemente uma ferramenta de configuração de preferências do usuário utilizando os componentes Swing.
+Crie uma classe chamada Usuário que salva as configurações e uma classe Preferencias Usuario que deve conter: 
+#### Atributos: 
+JLabel para os títulos "Tema", "Notificações" e "Volume" 
+Um JComboBox com as opções "Claro" e "Escuro" para o tema 
+Um JCheckBox para habilitar/desabilitar notificações 
+Um JSlider para ajustar o volume (valores de 0 a 100) 
+JButton para salvar as preferências 
+JTextArea para exibir as preferências salvas 
+#### Funcionalidades: 
+O usuário deve selecionar o tema, habilitar ou desabilitar notificações, ajustar o volume e, ao clicar no botão "Salvar", as preferências selecionadas devem ser exibidas ao objeto usuário. 
+O sistema deve persistir as escolhas até que o programa seja fechado. 
+Utilize princípios de encapsulamento e organização modular do código, criando métodos separados para cada funcionalidade relevante. 
+Ao selecionar tema claro ou escuro a cor do JFrame deve ser modificada.
+
+# TP II
+
+### ATIVIDADE PRÁTICA 1 - JAVA JDBC
+#### Gestão de Tarefas Com Persistência JDBC (Console)  
+
+ Descrição: Crie um sistema de gestão de tarefas onde os usuários podem criar, editar, e excluir tarefas, além de marcar tarefas como concluídas. As tarefas devem ser categorizadas.  
+ 
+ Desafios: Implementar filtros para visualizar tarefas por categoria, status.
+
+### ATIVIDADE PRÁTICA 2 - CONSUMO API
+Descrição: Com base no sistema que consome a API que retorna um endereço.Criar consulta automatizada com switch case, while e um ArrayList de Enderecos.  
+
+1. Buscar endereço (Verifica se Já tem na lista antes de buscar no via cep)  
+2. Excluir endereços da lista.  
+3. Histórico de todo que foram buscados.
